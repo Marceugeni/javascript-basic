@@ -1,0 +1,74 @@
+// fase2
+const myName = ['M', 'A', 'R', 'C',' ', 'E', 'U', 'G', 'E', 'N', 'I'];
+const vocals =['A', 'E', 'I', 'O', 'U'];
+
+let joined = myName.join('');
+console.log('Partim del nom', joined);
+
+
+let filteredMyName = myName.map((resulth) => {
+    if myName 
+});
+
+
+// let trobada = 0;
+// for (i = 0; i < myName.length; i++){
+//     if(vocals.indexOf(myName[i]) == -1){
+//         console.log ('He trobat la lletra ')
+//     }
+// }
+
+
+
+// myName.map(function(consoVocals){
+//     if (consoVocals = 'A' ){
+//         console.log ('He trovat la VOCAL: A');
+//     } else if (consoVocals = 'E') { 
+//         console.log ('He trobat la VOCAL: E');
+//     } else if (consoVocals = 'I') { 
+//         console.log ('He trobat la VOCAL: I');
+//     } else if (consoVocals = 'O') { 
+//         console.log ('He trobat la VOCAL: O');
+//     } else if (consoVocals = 'U') { 
+//         console.log ('He trobat la VOCAL: U');
+//     } else {
+//         console.log ('He trobat la CONSONANT');
+//     }
+
+// })
+--------------------------------------------
+
+  //fase 1
+        var nom = ["a", "d", "r", "i", "a"];
+
+        for(let i = 0; i<nom.length; i++){
+            console.log(nom[i]);
+        }
+
+        //fase 2
+        for(let i = 0; i<nom.length; i++){
+            if(nom[i].match(/[aeiou]/gi)) console.log("He trobat la vocal: " + nom[i]);
+            else if (nom[i].match(/[bcdfghjklmnpqrstvwxys]/gi)) console.log("He trobat la consonant: " + nom[i]);
+            else if (nom[i].match(/[0-9]/gi)) console.log("Els noms de persones no tenen el numero: " + nom[i]);
+            else console.log("What's this?");
+        }
+
+        //fase 3
+        const returnObject = {};
+
+        var dates = nom.map(function(character){
+            if (returnObject.hasOwnProperty(character)) {
+                returnObject[character] += 1;
+            } else {
+                returnObject[character] = 1;
+            }
+        });
+        
+        console.log(returnObject);
+
+        //fase 4
+        var cognom = "peradalta";
+        cognom = cognom.split("");
+        var suma = nom.concat(" ").concat(cognom);
+
+        console.log(suma);
